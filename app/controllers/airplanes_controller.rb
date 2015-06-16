@@ -5,7 +5,10 @@ class AirplanesController < ApplicationController
   # GET /airplanes.json
   def index
     @airplanes = Airplane.all
-    render :json => @airplanes
+    respond_to do |format|
+      format.html { }  # Default behaviour: show the associated view
+      format.json { render :json => @airplanes } # Show the associated view in Json
+    end
   end
 
   # GET /airplanes/1
