@@ -1,0 +1,9 @@
+var liger = liger || {};
+
+liger.User = Backbone.Model.extend({
+  urlRoot: '/users',
+  defaults: {
+    username: '',
+    email: ''
+  }
+});
