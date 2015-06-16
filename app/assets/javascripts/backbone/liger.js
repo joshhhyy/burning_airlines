@@ -24,10 +24,6 @@ $(document).ready(function () {
 
 
 
-// What does urlRoot do and why do we use url & urlroot?
-// What does fetch do?
-// What does _.template do?
-// 
 
 
 
