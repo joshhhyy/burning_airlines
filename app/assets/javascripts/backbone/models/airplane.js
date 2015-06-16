@@ -1,7 +1,7 @@
 var liger = liger || {};
 
 liger.Airplane = Backbone.Model.extend({
-  urlRoot: '/airplanes',
+  urlRoot "/planes/:plane_id",
   defaults: {
     name: '',
     row: null,

@@ -5,6 +5,7 @@ class AirplanesController < ApplicationController
   # GET /airplanes.json
   def index
     @airplanes = Airplane.all
+    render :json => @airplanes
   end
 
   # GET /airplanes/1
