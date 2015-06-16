@@ -1,24 +1,24 @@
-var app = app || {};
+var liger = liger || {};
 
 // Router is similar to routes.rb in Rails but with code actions as well
 
-app.AppRouter = Backbone.Router.extend({
+liger.AppRouter = Backbone.Router.extend({
   routes: {
-    ''         : 'index',
-    'posts/:id': 'viewPost'
+    'index'             : 'index',
+    'airplanes/:id'     : 'viewAirplane'
   },
 
   // Pretty much a GET/
 
   index: function () {
-    console.log('blogpost length', app.blogPosts.length)
-    var appView = new app.AppView({collection: app.blogPosts});
+    console.log('number of airplanes ', liger.airlinePlanes.length)
+    var appView = new liger.AppView({collection: liger.airlinePlanes});
     appView.render();
   },
 
   // Pretty much a GET/posts/:id
 
-  viewPost: function (id) {
+  viewAirplane: function (id) {
     var post = app.blogPosts.get(id);
     var postView = new PostView({model: post});
     postView.render();

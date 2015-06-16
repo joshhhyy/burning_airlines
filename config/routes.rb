@@ -40,6 +40,8 @@
 #
 
 Rails.application.routes.draw do
+  get 'liger/index'
+
   root :to => 'session#new'
 
   resources :users
