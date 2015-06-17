@@ -1,7 +1,9 @@
 var liger = liger || {};
 
 liger.Flight = Backbone.Model.extend({
-  urlRoot: "/airplanes/:airplane_id/flights/:flight_id",
+  urlRoot: function() {
+    return '/airplanes/' + this.get(id) + '/flights'
+  },
   defaults: {
     flight_no: null,
     departure: '',
