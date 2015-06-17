@@ -30,7 +30,9 @@ $(document).ready(function () {
     liger.router = new liger.AppRouter();
     Backbone.history.start();
   }); 
-})
+
+
+});
 
 
 

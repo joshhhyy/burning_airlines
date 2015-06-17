@@ -3,7 +3,7 @@ var liger = liger || {};
 liger.AirplaneListView = Backbone.View.extend({
   tagname: 'li',
   events: {
-    'click' : 'showFlight'
+    'click' : 'showPlane'
   },
 
   render: function() {
@@ -17,7 +17,7 @@ liger.AirplaneListView = Backbone.View.extend({
 
   // Pretty much a GET request
 
-  showFlight: function() {
+  showPlane: function() {
     liger.router.navigate('airplanes/' + this.model.get('id'), true)
   }
 

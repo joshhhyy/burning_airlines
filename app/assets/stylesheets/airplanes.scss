@@ -1,3 +1,27 @@
-// Place all the styles related to the Airplanes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.allSeats {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.freeSeat {
+    margin: 1px;
+    padding-top: 20px;
+    vertical-align: middle;
+    font-family: Arial;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    background: green;
+}
+
+.freeSeat:hover{
+   background-color: red;
+}
+

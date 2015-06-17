@@ -5,7 +5,8 @@ var liger = liger || {};
 liger.AppRouter = Backbone.Router.extend({
   routes: {
     'index'             : 'index',
-    'airplanes/:id'     : 'viewAirplane'
+    'airplanes/:id'     : 'viewAirplane',
+    'airplanes/:id/flights' : 'viewFlights'
   },
 
   // Pretty much a GET/
@@ -20,7 +21,13 @@ liger.AppRouter = Backbone.Router.extend({
 
   viewAirplane: function (id) {
     var airplane = liger.airlinePlanes.get(id);
-    var flightView = new FlightView({model: airplane});
-    flightView.render();
+    var planeView = new PlaneView({model: airplane});
+    planeView.render();
+  },
+
+  viewFlights: function(id) {
+    var flight = liger.airlineFlights.get(id);
+    var flightsView = new FlightsView({collection: liger.airlineFlights})
+    flightsView.render();
   }
 });
