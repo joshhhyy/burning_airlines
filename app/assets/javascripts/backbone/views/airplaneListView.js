@@ -15,6 +15,8 @@ liger.AirplaneListView = Backbone.View.extend({
     $('#airplanes').append(this.$el);
   },
 
+  // Pretty much a GET request
+
   showFlight: function() {
     liger.router.navigate('airplanes/' + this.model.get('id'), true)
   }
