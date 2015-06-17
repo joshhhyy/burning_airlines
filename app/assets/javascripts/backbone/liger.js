@@ -1,4 +1,4 @@
-var app = app || {};
+var liger = liger || {};
 
 // Use {{style}} interpolation instead of <%= erb style %>
 
@@ -17,7 +17,8 @@ $(document).ready(function () {
   liger.airlinePlanes = new liger.Airplanes();
   liger.airlinePlanes.fetch().done(function () {
 
-    console.log('all fetched!');
+    liger.airlineFlights = new liger.Flights();
+    console.log('all fetched')
     liger.router = new liger.AppRouter();
     Backbone.history.start();
   }); 
