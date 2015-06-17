@@ -19,8 +19,8 @@ liger.AppRouter = Backbone.Router.extend({
   // Pretty much a GET/posts/:id
 
   viewAirplane: function (id) {
-    var post = app.blogPosts.get(id);
-    var postView = new PostView({model: post});
-    postView.render();
+    var airplane = app.airplanes.get(id);
+    var flightView = new flightView({model: airplane});
+    flightView.render();
   }
 });
