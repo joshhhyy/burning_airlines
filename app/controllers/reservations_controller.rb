@@ -5,6 +5,10 @@ class ReservationsController < ApplicationController
   # GET /reservations.json
   def index
     @reservations = Reservation.all
+    respond_to do |format|
+      format.html { }  # Default behaviour: show the associated view
+      format.json { render :json => @reservations } # Show the associated view in Json
+    end
   end
 
   # GET /reservations/1

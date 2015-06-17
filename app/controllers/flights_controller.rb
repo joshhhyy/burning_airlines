@@ -7,7 +7,7 @@ class FlightsController < ApplicationController
     @flights = Flight.all
     respond_to do |format|
       format.html { }  # Default behaviour: show the associated view
-      format.json { render :json => @airplanes } # Show the associated view in Json
+      format.json { render :json => @flights } # Show the associated view in Json
     end
   end
 

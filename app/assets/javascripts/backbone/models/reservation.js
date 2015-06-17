@@ -1,7 +1,9 @@
 var liger = liger || {};
 
 liger.Reservation = Backbone.Model.extend({
-  urlRoot: "/airplanes/:airplane_id/flights/:flight_id/reservations/:reservation_id",
+  urlRoot: function () {
+    return '/airplanes/:airplane_id/flights/' + this.get(id) + '/reservations'
+  },
   defaults: {
     user_id: null,
     row: null,

@@ -16,9 +16,17 @@ $(document).ready(function () {
 
   liger.airlinePlanes = new liger.Airplanes();
   liger.airlinePlanes.fetch().done(function () {
+    console.log('Airplanes fetched')
 
     liger.airlineFlights = new liger.Flights();
-    console.log('all fetched')
+    liger.airlineFlights.fetch().done(function () {
+      console.log('Flights fetched')
+
+      liger.airlineReservations = new liger.Reservations();
+      liger.airlineReservations.fetch().done(function () {
+        console.log('Reservations fetched. EVERYTHING FETCHED')
+      })
+     });
     liger.router = new liger.AppRouter();
     Backbone.history.start();
   }); 
